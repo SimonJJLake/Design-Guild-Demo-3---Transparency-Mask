@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee&family=Staatliches&display=swap");
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.mask {
+  position: absolute;
+  width: 30vh;
+  height: 30vh;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 1) 50%,
+    rgba(0, 0, 0, 0) 70%
+  );
+}
+.mask2 {
+  position: absolute;
+  width: 10vh;
+  height: 15vh;
+  transform: translate(-50%, -50%);
+  background-color: #000;
+  box-shadow: 0 0 15vh 20vh #000;
+
+  animation-name: spin;
+  animation-duration: 4000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.textColour {
+  mix-blend-mode: screen;
+}
+
+.text {
+  font-size: 12rem;
+  position: absolute;
+  margin: 0;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-family: "Bungee", cursive;
+  cursor: default;
+}
+.outline {
+  color: transparent;
+  -webkit-text-stroke: 5px;
+  -webkit-text-stroke-color: white;
+}
+@keyframes spin {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
